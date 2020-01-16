@@ -90,7 +90,7 @@ class App extends Component {
         {cards.map((card, index) => (
           <Card
             card={card}
-            feedback={this.getFeedbackForCard(index)}
+            feedback={this.getFeedbackForCard(index, 8, test)}
             index={index}
             key={index}
             onClick={this.handleCardClick}
