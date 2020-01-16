@@ -34,11 +34,10 @@ class App extends Component {
       const card = candidates.pop()
       result.push(card, card)
     }
-      return shuffle(result)
-      return shuffle(result);;
+    return shuffle(result)
   }
 
-  getFeedbackForCard(index) 
+  getFeedbackForCard(index) {
     const { currentPair, matchedCardIndices } = this.state
     const indexMatched = matchedCardIndices.includes(index)
 
@@ -63,8 +62,8 @@ class App extends Component {
 
     if (currentPair.length === 0) {
       this.setState({ currentPair: [index] })
-        return
-            ;
+      return
+    }
 
     this.handleNewPairClosedBy(index)
   }
