@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-//import shuffle from 'lodash.shuffle'
+import shuffle from 'lodash.shuffle'
 
 import './App.css'
 
