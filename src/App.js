@@ -8,7 +8,7 @@ import GuessCount from './GuessCount'
 import HallOfFame, { FAKE_HOF } from './HallOfFame'
 import HighScoreInput from './HighScoreInput'
 
-const SIDE = 6
+const SIDE = 7
 export const SYMBOLS = '😀🎉💖🎩🐶🐱🦄🐬🌍🌛🌞💫🍎🍌🍓🍐🍟🍿'
 const VISUAL_PAUSE_MSECS = 750
 
