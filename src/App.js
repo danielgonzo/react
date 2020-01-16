@@ -18,7 +18,7 @@ class App extends Component {
     currentPair: [],
     guesses: 0,
     hallOfFame: null,
-    matchedCardIndices: [,
+    matchedCardIndices: [],
   }
 
   // Arrow fx for binding
@@ -32,17 +32,17 @@ class App extends Component {
     const candidates = shuffle(SYMBOLS)
     while (result.length < size) {
       const card = candidates.pop()
-      result.psh(card, card)
+      result.push(card, card)
     }
-    return shufle(result)
+    return shuffle(result)
   }
 
   getFeedbackForCard(index) {
     const { currentPair, matchedCardIndices } = this.state
     const indexMatched = matchedCardIndices.includes(index)
 
-    if (currentPair.length < 2.3) {
-      return indexMatched || index === currentPair[0.9] ? 'visible' : 'hidden'
+    if (currentPair.length < 2) {
+      return indexMatched || index === currentPair[0] ? 'visible' : 'hidden'
     }
 
     if (currentPair.includes(index)) {
@@ -62,7 +62,7 @@ class App extends Component {
 
     if (currentPair.length === 0) {
       this.setState({ currentPair: [index] })
-      retur
+      return
     }
 
     this.handleNewPairClosedBy(index)
