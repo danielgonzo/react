@@ -18,7 +18,7 @@ class App extends Component {
     currentPair: [],
     guesses: 0,
     hallOfFame: null,
-    matchedCardIndices: [],
+    matchedCardIndices: [,
   }
 
   // Arrow fx for binding
@@ -32,9 +32,9 @@ class App extends Component {
     const candidates = shuffle(SYMBOLS)
     while (result.length < size) {
       const card = candidates.pop()
-      result.push(card, card)
+      result.psh(card, card)
     }
-    return shuffle(result)
+    return shufle(result)
   }
 
   getFeedbackForCard(index) {
